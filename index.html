@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КампусФуд</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header id="site-header" class="header">
+        <div id="logo" class="header-logo">
+            <h1>КампусФуд</h1>
+        </div>
+        <nav id="header-nav" class="header-nav">
+            <button id="address-btn" class="btn btn-address" type="button">📍 Выбрать адрес доставки</button>
+            <a id="cart-link" href="#cart" class="btn btn-cart">🛒 Корзина <span id="cart-counter" class="cart-counter">0</span></a>
+        </nav>
+    </header>
+
+    <dialog id="address-modal" class="modal address-modal">
+        <div class="modal-content">
+            <h2>Выберите адрес доставки</h2>
+            <form id="address-form" class="address-form">
+                <label for="building-select">Корпус</label>
+                <select id="building-select" name="building" class="form-control">
+                    <option value="1">Корпус 1</option>
+                    <option value="2">Корпус 2</option>
+                    <option value="3">Корпус 3</option>
+                </select>
+                <label for="room-input">Номер аудитории</label>
+                <input type="text" id="room-input" name="room" class="form-control" placeholder="Например, 214">
+                <button id="address-save-btn" class="btn btn-primary" type="submit">Сохранить</button>
+            </form>
+        </div>
+    </dialog>
+
+    <main id="main-content" class="main">
+        
+        <section id="categories" class="categories">
+            <h2>Категории меню</h2>
+            <ul id="category-list" class="category-list">
+                <li><a href="#burgers" class="category-link">Бургеры</a></li>
+                <li><a href="#pizza" class="category-link">Пицца</a></li>
+                <li><a href="#snacks" class="category-link">Снеки и закуски</a></li>
+                <li><a href="#drinks" class="category-link">Напитки</a></li>
+                <li><a href="#combos" class="category-link">Комбо-наборы</a></li>
+            </ul>
+        </section>
+
+        <section id="menu" class="menu">
+            <h2>Основное меню</h2>
+            
+            <div id="burgers" class="category-section">
+                <h3>Бургеры</h3>
+                <div id="burgers-grid" class="products-grid">
+                    <article id="product-burger" class="product-card">
+                        <img src="images/burger.jpg" alt="Бургер" class="product-image">
+                        <h4 class="product-title">Бургер</h4>
+                        <p class="product-price">250 ₽</p>
+                        <button class="btn btn-add-to-cart" type="button">В корзину</button>
+                    </article>
+                </div>
+            </div>
+
+            <div id="pizza" class="category-section">
+                <h3>Пицца</h3>
+                <div id="pizza-grid" class="products-grid">
+                    <article id="product-margherita" class="product-card">
+                        <img src="images/pizza.jpg" alt="Пицца Маргарита" class="product-image">
+                        <h4 class="product-title">Пицца Маргарита</h4>
+                        <p class="product-price">350 ₽</p>
+                        <button class="btn btn-add-to-cart" type="button">В корзину</button>
+                    </article>
+                </div>
+            </div>
+
+            <div id="snacks" class="category-section">
+                <h3>Снеки и закуски</h3>
+                <div id="snacks-grid" class="products-grid">
+                    <article id="product-fries" class="product-card">
+                        <img src="images/fries.jpg" alt="Картошка фри" class="product-image">
+                        <h4 class="product-title">Картошка фри</h4>
+                        <p class="product-price">120 ₽</p>
+                        <button class="btn btn-add-to-cart" type="button">В корзину</button>
+                    </article>
+                    <article id="product-rings" class="product-card">
+                        <img src="images/rings.jpg" alt="Луковые кольца" class="product-image">
+                        <h4 class="product-title">Луковые кольца</h4>
+                        <p class="product-price">140 ₽</p>
+                        <button class="btn btn-add-to-cart" type="button">В корзину</button>
+                    </article>
+                    <article id="product-nuggets" class="product-card">
+                        <img src="images/nuggets.jpg" alt="Наггетсы" class="product-image">
+                        <h4 class="product-title">Наггетсы</h4>
+                        <p class="product-price">180 ₽</p>
+                        <button class="btn btn-add-to-cart" type="button">В корзину</button>
+                    </article>
+                    <article id="product-donut" class="product-card">
+                        <img src="images/donut.jpg" alt="Пончик" class="product-image">
+                        <h4 class="product-title">Пончик</h4>
+                        <p class="product-price">110 ₽</p>
+                        <button class="btn btn-add-to-cart" type="button">В корзину</button>
+                    </article>
+                </div>
+            </div>
+
+            <div id="drinks" class="category-section">
+                <h3>Напитки</h3>
+                <div id="drinks-grid" class="products-grid">
+                    <article id="product-juice" class="product-card">
+                        <img src="images/juice.jpg" alt="Апельсиновый сок" class="product-image">
+                        <h4 class="product-title">Апельсиновый сок</h4>
+                        <p class="product-price">130 ₽</p>
+                        <button class="btn btn-add-to-cart" type="button">В корзину</button>
+                    </article>
+                    <article id="product-shake" class="product-card">
+                        <img src="images/shake.jpg" alt="Молочный коктейль" class="product-image">
+                        <h4 class="product-title">Молочный коктейль</h4>
+                        <p class="product-price">190 ₽</p>
+                        <button class="btn btn-add-to-cart" type="button">В корзину</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="combos" class="combos">
+            <h2>Комбо-наборы</h2>
+            <div id="combos-grid" class="combos-grid">
+                <article id="combo-classic" class="combo-card">
+                    <h3 class="combo-title">Комбо Классик</h3>
+                    <p class="combo-composition">Бургер + Картошка фри + Апельсиновый сок</p>
+                    <p class="combo-prices">Цена: <strong>390 ₽</strong> <span class="old-price">540 ₽</span></p>
+                    <button id="add-combo-classic" class="btn btn-add-combo" type="button">Добавить комбо</button>
+                </article>
+                <article id="combo-pizza" class="combo-card">
+                    <h3 class="combo-title">Пицца-комбо</h3>
+                    <p class="combo-composition">Пицца Маргарита + Луковые кольца + Молочный коктейль</p>
+                    <p class="combo-prices">Цена: <strong>499 ₽</strong> <span class="old-price">690 ₽</span></p>
+                    <button id="add-combo-pizza" class="btn btn-add-combo" type="button">Добавить комбо</button>
+                </article>
+                <article id="combo-snack" class="combo-card">
+                    <h3 class="combo-title">Снек-комбо</h3>
+                    <p class="combo-composition">Наггетсы + Луковые кольца + Пончик</p>
+                    <p class="combo-prices">Цена: <strong>360 ₽</strong> <span class="old-price">500 ₽</span></p>
+                    <button id="add-combo-snack" class="btn btn-add-combo" type="button">Добавить комбо</button>
+                </article>
+            </div>
+        </section>
+
+        <section id="cart" class="cart">
+            <h2>Корзина</h2>
+            <div id="cart-items" class="cart-items">
+                <p id="empty-cart-message" class="empty-cart-message">Корзина пуста. Добавьте блюда из меню!</p>
+            </div>
+            
+            <div id="cart-summary" class="cart-summary">
+                <p class="total-row">Итоговая сумма: <span id="cart-total" class="cart-total">0 ₽</span></p>
+                <button id="checkout-btn" class="btn btn-primary btn-checkout" type="button">Оформить заказ</button>
+            </div>
+
+            <div id="promo-section" class="promo-section">
+                <h3>Промокод</h3>
+                <form id="promo-form" class="promo-form">
+                    <input type="text" id="promo-input" name="promo" class="form-control" placeholder="Введите код (например, FREE25)">
+                    <button id="apply-promo-btn" class="btn btn-secondary" type="button">Применить</button>
+                </form>
+                <p id="promo-status" class="promo-status"></p>
+            </div>
+
+            <div id="checkout-form-wrapper" class="checkout-form-wrapper">
+                <h3>Форма оформления заказа</h3>
+                <form id="order-form" class="order-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="customer-name">Имя *</label>
+                        <input type="text" id="customer-name" name="name" class="form-control" required placeholder="Ваше имя">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="order-building">Номер корпуса</label>
+                        <input type="text" id="order-building" name="building" class="form-control" placeholder="Автоматически из шапки">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="order-room">Номер аудитории *</label>
+                        <input type="text" id="order-room" name="room" class="form-control" required placeholder="Куда доставить заказ">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customer-phone">Номер телефона *</label>
+                        <input type="tel" id="customer-phone" name="phone" class="form-control" required placeholder="+7 (___) ___-__-__">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="order-comment">Комментарий к заказу</label>
+                        <textarea id="order-comment" name="comment" class="form-control" placeholder="Дополнительные пожелания"></textarea>
+                    </div>
+
+                    <button id="submit-order-btn" class="btn btn-primary btn-submit" type="submit">Отправить заказ</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="site-footer" class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 КампусФуд. Заказчик: Студенческий совет колледжа.</p>
+            <p>Исполнитель: IT-отдел колледжа</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
